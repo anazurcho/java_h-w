@@ -1,12 +1,9 @@
 package anzu;
 import java.io.*;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class Second {
-    public static void main(String[] args)throws Exception
+    public static void main(String[] args)throws IOException
     {
         File file = new File("First.txt");
 

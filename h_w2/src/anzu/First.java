@@ -1,9 +1,6 @@
 package anzu;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.List;
-import java.util.ArrayList;
+import java.io.*;
+import java.util.*;
 
 public class First {
 
