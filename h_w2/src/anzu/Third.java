@@ -31,9 +31,44 @@ public class Third implements Interface{
             if (b % p == 0 && isPrime(p)){
                 System.out.println(p);
             }
-
         }
+    }
 
+    public void four(){
+        System.out.println(maxOccurring(b));
+    }
+
+    static int maxOccurring(int x)
+    {   if (x < 0)
+        x = -x;
+
+        int result = 0;
+        int max_count = 1;
+
+        for (int d = 0; d <= 9; d++)
+        {
+
+            int count = countOccurrences(x, d);
+            if (count >= max_count)
+            {
+                max_count = count;
+                result = d;
+            }
+        }
+        return result;
+    }
+
+    static int countOccurrences(int x,
+                                int d)
+    {
+        int count = 0;
+        while (x > 0)
+        {
+            if (x % 10 == d)
+                count++;
+            x = x / 10;
+        }
+        return count;
     }
 
     public static boolean isPrime(int n) {
@@ -47,10 +82,11 @@ public class Third implements Interface{
     }
 
     public static void main(String[] args) {
-        Third t = new Third(17, 20);
+        Third t = new Third(17, 2012);
 //        t.one();
 //        t.two();
-        t.three();
+//        t.three();
+        t.four();
     }
 
 

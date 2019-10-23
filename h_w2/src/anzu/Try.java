@@ -1,45 +1,50 @@
 package anzu;
+import java.io.*;
 
 public class Try {
-    public int a, b;
 
-    Try(int a, int b){
-        this.a = a;
-        this.b = b;
+    static int countOccurrences(int x,
+                                int d)
+    {
+        int count = 0;
+        while (x > 0)
+        {
+            if (x % 10 == d)
+                count++;
+            x = x / 10;
+        }
+        return count;
     }
 
-    public void two(){
-        for (int i = 1; i <= b; i++){
-            if (b % i == 0 && isPrime(i)){
-                System.out.println(i);
+
+    static int maxOccurring( int x)
+    {   if (x < 0)
+            x = -x;
+
+        int result = 0;
+        int max_count = 1;
+
+        for (int d = 0; d <= 9; d++)
+        {
+
+            int count = countOccurrences(x, d);
+            if (count >= max_count)
+            {
+                max_count = count;
+                result = d;
             }
         }
-    }
-    public void first(){
-        if (isPrime(a)){
-            System.out.println("martivi");
-        }
-        else{
-            System.out.println("rtuli");
-        }
+        return result;
     }
 
-    public static boolean isPrime(int n) {
-        if (n <= 1) {
-            return false;
-        }
-        for (int i = 2; i < (n); i++) {
-            if (n % i == 0) {
-                return false;
-            }
-        }
-        return true;
-    }
+    public static void main (String[] args)
+    {
+        int x = 1223355;
+        System.out.println("Max occurring digit is " +
+                maxOccurring(x));
 
-    public static void main(String[] args) {
-        Try t = new Try(7,20);
-        t.first();
-//        t.two();
     }
-
 }
+
+
+
