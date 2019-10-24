@@ -73,7 +73,9 @@ public class Third implements Interface{
 
     public static boolean isPrime(int n) {
 
+
         for (int i = 2; i < n; i++) {
+
             if (n % i == 0) {
                 return false;
             }
@@ -82,11 +84,15 @@ public class Third implements Interface{
     }
 
     public static void main(String[] args) {
-        Third t = new Third(17, 2012);
+        Third t = new Third(2001, 2012);
+        System.out.println("მეთოდი 1: ბეჭდავს ყველა მთელ რიცხვს a-სა და b-ს შორის;");
 //        t.one();
+        System.out.println("მეთოდი 2: ბეჭდავს a-ს ყველა გამყოფს;");
 //        t.two();
-//        t.three();
-        t.four();
+        System.out.println("მეთოდი 3: ბეჭდავს b-ს ყველა მარტივ გამყოფს;");
+        t.three();
+        System.out.println("მეთოდი 4: აბრუნებს b-ს ჩანაწერში ყველაზე ხშირად გამეორებად ციფრს.");
+//        t.four();
     }
 
 

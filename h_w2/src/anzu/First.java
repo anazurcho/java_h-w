@@ -4,12 +4,11 @@ import java.util.*;
 
 public class First {
 
-	public static void main(String[] args) throws IOException{
+	public static void main(String[] args) throws Exception{
 		double start = 100;
 		double finish = 200;
 		double i;
 
-		double y;
 
 		List<Double> arr = new ArrayList<>();
 
@@ -21,10 +20,13 @@ public class First {
 
 		for (double x : arr){
 			x/=100;
-			y = Math.pow(x,2) + 2 * x + 3;
-			writer.write(String.valueOf(y));
+			writer.write(function(x));
 			writer.newLine();
 		}
 		writer.close();
+	}
+
+	public static String function(double x){
+		return (String.valueOf(Math.pow(x,2) + 2 * x + 3));
 	}
 }
