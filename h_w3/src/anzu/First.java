@@ -13,16 +13,16 @@ public class First {
         for (int i=0; i<12; i++){
             arr.add(rand.nextInt(100));
         }
-        Collections.sort(arr);
+//        Collections.sort(arr);
         System.out.println("თავდაპირველი " + Arrays.toString(arr.toArray()));
         int i=0;
         for(Integer listitem : arr){
-            if(i%2==0){
+            if(i%2!=0 || i==0){
                 arr1.add(listitem);
             }
             i++;
         }
-        System.out.println("ლუწი ინდექსის გარეშე ინდექსიანი " + Arrays.toString(arr1.toArray()));
+        System.out.println("ლუწი ინდექსის გარეშე " + Arrays.toString(arr1.toArray()));
     }
 
 }
