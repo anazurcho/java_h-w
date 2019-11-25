@@ -13,7 +13,7 @@ public class First {
         for (int i=0; i<12; i++){
             arr.add(rand.nextInt(100));
         }
-//        Collections.sort(arr);
+        Collections.sort(arr);
         System.out.println("თავდაპირველი " + Arrays.toString(arr.toArray()));
         int i=0;
         for(Integer listitem : arr){
