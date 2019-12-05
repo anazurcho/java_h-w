@@ -16,18 +16,16 @@ public class Main {
         System.out.println("(like : p-2-s-5-7-w-7-9)");
         para = scanner.nextLine();
         String[] arrOfStr = para.split("-");
-//        for (String a : arrOfStr){
-//            System.out.println(a);}
-        int first = Integer.parseInt(arrOfStr[6]);
-        int second = Integer.parseInt(arrOfStr[7]);
-        int firstfors = Integer.parseInt(arrOfStr[4]);
-        int secondfors = Integer.parseInt(arrOfStr[3]);
-        int firstforp = Integer.parseInt(arrOfStr[1]);
-//
+        int wordstarts = Integer.parseInt(arrOfStr[6]);
+        int wordends = Integer.parseInt(arrOfStr[7]);
+        int stringstarts = Integer.parseInt(arrOfStr[3]);
+        int stringends = Integer.parseInt(arrOfStr[4]);
+        int paragraphn = Integer.parseInt(arrOfStr[1]);
+
 
         Language langu = new Language();
         String stringLang = langu.chooselang(lang);
-        System.out.println(langu.result(firstforp,firstfors,secondfors,first,second,stringLang));
+        System.out.println(langu.result(paragraphn,stringstarts,stringends,wordstarts,wordends,stringLang));
 
     }
 }

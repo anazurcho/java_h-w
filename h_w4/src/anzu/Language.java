@@ -1,8 +1,9 @@
 package anzu;
 import java.util.Random;
 
-public class Language {
-    public  String chooselang(String lang){
+public class Language implements LangInter {
+    @Override
+    public String chooselang(String lang){
         String alp;
         switch(lang) {
             case "en":
@@ -21,7 +22,8 @@ public class Language {
         return  alp;
     }
 
-    public static int randomint(int min, int max) {
+    @Override
+    public int randomint(int min, int max) {
         int x;
         if (min>max){
             x = min;
@@ -33,10 +35,10 @@ public class Language {
         return ans;
 
     }
-
-    public static String randomword(int minforw,int maxforw,String lang){
+    @Override
+    public String randomword(int wordstarts,int maxforw,String lang){
         StringBuilder builder = new StringBuilder();
-        int count = randomint(minforw,maxforw);
+        int count = randomint(wordstarts,maxforw);
         while (count-- != 0) {
 
             int character = (int)(Math.random()*lang.length());
@@ -47,30 +49,28 @@ public class Language {
         return builder.toString();
     }
 
-    public static String randomSent(int minfors, int maxfors, int minforw, int maxforw, String lang){
+    public String randomSent(int stringstarts, int stringends, int wordstarts, int wordends, String lang){
         String words = "";
-//        String word = randomword(minforw,maxforw,lang);
-        int string = randomint(minfors,maxfors);
+        int string = randomint(stringstarts,stringends);
         while (string-- != 0){
-            words += " "+randomword(minforw,maxforw,lang);
+            words += " "+randomword(wordstarts,wordends,lang);
         }
         return words;
     }
 
 
-    public static String paragr(int p, int minfors, int maxfors, int minforw, int maxforw, String lang) {
+    public String paragr(int paragraphn, int stringstarts, int stringends, int wordstarts, int wordends, String lang) {
         String senta = "";
-        while (p-- != 0){
-            senta += "\n"+randomSent(minfors, maxfors, minforw, maxforw, lang);
+        while (paragraphn-- != 0){
+            senta += "\n"+randomSent(stringstarts, stringends, wordstarts, wordends, lang);
         }
         return senta;
 
     }
-    public static String result(int p, int minfors, int maxfors, int minforw, int maxforw, String lang) {
+    public String result(int paragraphn, int stringstarts, int stringends, int wordstarts, int wordends, String lang) {
         String result = "";
-        result = paragr(p,minfors, maxfors, minforw, maxforw, lang);
+        result = paragr(paragraphn,stringstarts, stringends, wordstarts, wordends, lang);
         return result;
     }
-
 
 }
