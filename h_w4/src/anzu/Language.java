@@ -3,7 +3,7 @@ import java.util.Random;
 
 public class Language implements LangInter {
     @Override
-    public String chooselang(String lang){
+    public String chooselang(String lang){//აღმოჩნდა რომ ასე არ იყო !
         String alp;
         switch(lang) {
             case "en":
@@ -20,6 +20,34 @@ public class Language implements LangInter {
                 break;
         }
         return  alp;
+    }
+
+    public String langchoose(String lang){
+        char first, last;
+        String alp = "";
+        switch (lang) {
+            case "en":
+                first = 'a';
+                last = 'z';
+                break;
+            case "ge":
+                first = 'ა';
+                last = 'ჰ';
+                break;
+            case "ru":
+                first = 'а';
+                last = 'я';
+                break;
+            default:
+                first = 'a';
+                last = 'z';
+                break;
+        }
+        for(int i = (int)first; i <= (int)last; i++){
+            alp += (char)i;
+        }
+
+        return alp;
     }
 
     @Override

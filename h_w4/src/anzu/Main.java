@@ -24,7 +24,7 @@ public class Main {
 
 
         Language langu = new Language();
-        String stringLang = langu.chooselang(lang);
+        String stringLang = langu.langchoose(lang);
         System.out.println(langu.result(paragraphn,stringstarts,stringends,wordstarts,wordends,stringLang));
 
     }
