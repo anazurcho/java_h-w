@@ -2,6 +2,14 @@ package anzu;
 import java.util.Random;
 
 public class Language implements LangInter {
+    public boolean trueorfalse(String para){
+        String pattern = "^p-\\d+-s-\\d+-\\d+-w-\\d+-\\d+";
+        if (para.matches(pattern)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
     @Override
     public String chooselang(String lang){//აღმოჩნდა რომ ასე არ იყო !
         String alp;
