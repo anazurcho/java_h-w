@@ -1,6 +1,6 @@
 package anzu;
 
-public interface LangInter {
+public interface gitLangInter {
     public int randomint(int min, int max);
     public String chooselang(String lang);
     public String randomword(int wordstarts,int maxforw,String lang);
