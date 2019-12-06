@@ -1,6 +1,7 @@
 package anzu;
 import java.util.Scanner;
 
+
 public class A {
     int x;
 

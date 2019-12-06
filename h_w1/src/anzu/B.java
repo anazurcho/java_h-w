@@ -2,7 +2,7 @@ package anzu;
 import java.util.Scanner;
 
 
-public class B extends A {//განსაზღვრეთ კლასი A შვილობილის კლასი B: დაამატეთ მთელი ტიპის y ცვლადი,
+public class B extends A {//განსაზღვრეთ კლასი A შვილობილის კლასი B: დაამატეთ მთელი ტიპის y ცვლადი
      int y;
 
      public void bmethod1(){//შეაქვს y ცვლადში მონაცემი კლავიატურიდან;

@@ -1,6 +1,7 @@
 package anzu;
 import java.util.Random;
 
+
 public class Language implements LangInter {
     public boolean trueorfalse(String para){
         String pattern = "^p-\\d+-s-\\d+-\\d+-w-\\d+-\\d+";

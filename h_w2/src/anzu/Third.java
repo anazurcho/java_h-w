@@ -58,8 +58,7 @@ public class Third implements Interface{
         return result;
     }
 
-    static int countOccurrences(int x,
-                                int d)
+    static int countOccurrences(int x,int d)
     {
         int count = 0;
         while (x > 0)

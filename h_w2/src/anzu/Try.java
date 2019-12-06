@@ -1,8 +1,8 @@
 package anzu;
 import java.io.*;
 
-public class Try {
 
+public class Try {
     static int countOccurrences(int x,
                                 int d)
     {

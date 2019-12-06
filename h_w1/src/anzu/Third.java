@@ -3,6 +3,7 @@ import java.util.Random;
 import java.util.Scanner;
 import java.util.Arrays;
 
+
 public class Third {
     int a, b, x, z;
     int[] randomN = new int[40];

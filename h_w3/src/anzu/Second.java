@@ -1,6 +1,6 @@
 package anzu;
-
 import java.util.*;
+
 
 public class Second {
     public void method1(){

@@ -1,6 +1,6 @@
 package anzu;
-
 import java.util.Scanner;
+
 
 public class Main {
 

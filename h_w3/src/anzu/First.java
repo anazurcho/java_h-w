@@ -4,7 +4,6 @@ import java.io.*;
 
 
 public class First {
-
     public void method1(){
         ArrayList<Integer> arr = new ArrayList<>();
         ArrayList<Integer> arr1 = new ArrayList<>();
