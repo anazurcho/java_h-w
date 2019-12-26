@@ -1,0 +1,9 @@
+package anzu;
+
+public class Main {
+
+    public static void main(String[] args)  throws Exception{
+	// write your code here
+        Calc calc = new Calc();
+    }
+}
