@@ -8,6 +8,9 @@ public class Main {
     public static void main(String[] args)   throws Exception{
 
 //                TicTac tic = new TicTac();
-                Pali pal = new Pali();
+//                Pali pal = new Pali();
+//        Lang lang = new Lang();
+        Seventh seven = new Seventh();
+
     }
 }
