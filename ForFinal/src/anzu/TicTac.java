@@ -18,11 +18,17 @@ public class TicTac {
             if (s.equals("Y") || s.equals("y")){
                 createTable();
                 printTable();
-                if (Win()){
+//                if (Win()){
+//                    cash+=5;
+//                }else {
+//                    cash-=5;
+//                }
+                if (Win1()){
                     cash+=5;
                 }else {
                     cash-=5;
                 }
+//                Win1();
             }else{
                 System.out.println("შენი თამაში დასრულებულია");
                 break;
@@ -79,5 +85,29 @@ public class TicTac {
             }
         }
         return false;
+    }
+
+
+    public boolean Win1(){
+        int f = 0,c = 0, p = 0;
+        for (int i=0;i<5;i++){
+            f = Integer.parseInt(table[i][0]) + Integer.parseInt(table[i][1])+ Integer.parseInt(table[i][2]);
+            if (f>0){
+                c++;
+            }
+        }
+        for (int l = 0; l<3; l++){
+            p = Integer.parseInt(table[0][l])+Integer.parseInt(table[1][l]) + Integer.parseInt(table[2][l])+
+                    Integer.parseInt(table[3][l]) +   Integer.parseInt(table[4][l]);
+            if (p>0){
+                c++;
+            }
+        }
+        System.out.println(c);
+        if (c>4){
+            return true;
+        }
+        return false;
+
     }
 }
