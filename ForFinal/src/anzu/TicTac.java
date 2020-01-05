@@ -89,12 +89,13 @@ public class TicTac {
 
 
     public boolean Win1(){
-        int f = 0,c = 0, p = 0;
+        int f = 0,c = 0, p = 0,q=0;
         for (int i=0;i<5;i++){
             f = Integer.parseInt(table[i][0]) + Integer.parseInt(table[i][1])+ Integer.parseInt(table[i][2]);
             if (f>0){
                 c++;
             }
+            q++;
         }
         for (int l = 0; l<3; l++){
             p = Integer.parseInt(table[0][l])+Integer.parseInt(table[1][l]) + Integer.parseInt(table[2][l])+
@@ -102,8 +103,10 @@ public class TicTac {
             if (p>0){
                 c++;
             }
+            q++;
         }
-        System.out.println(c);
+//        System.out.println(c);
+//        System.out.println(q);
         if (c>4){
             return true;
         }

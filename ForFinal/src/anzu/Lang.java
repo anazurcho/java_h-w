@@ -9,21 +9,36 @@ public class Lang {
     private  String alp = "abcdefghijklmnopqrstuvwxyz";
 
     public Lang() throws Exception{
-        String k = randomword();
-        System.out.println(k);
-        filewrite(k);
+        String winadadeba = randomwin();
+        System.out.println(winadadeba);
+        filewrite(winadadeba);
     }
 
     public String randomword(){
         StringBuilder builder = new StringBuilder();
+        String word="";
         int count = rand.nextInt(10);
+        System.out.println(count);
         while (count-- != 0) {
-
+            word = builder.toString();
             int character = (int)(Math.random()*alp.length());
-            builder.append(alp.charAt(character));
-
+            String aso = String.valueOf(alp.charAt(character));
+            if (!word.contains(aso)){
+                builder.append(alp.charAt(character));
+            }else{
+                count++;
+            }
         }
         return builder.toString();
+    }
+
+    public String randomwin(){
+        int count = rand.nextInt(10);
+        String winadadeba = "";
+        while (count-- != 0) {
+            winadadeba += " " + randomword();
+        }
+        return winadadeba;
     }
 
     private void filewrite(String answer) throws Exception{
