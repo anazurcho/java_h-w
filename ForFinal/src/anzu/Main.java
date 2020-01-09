@@ -13,6 +13,7 @@ public class Main {
 //        Seventh seven = new Seventh();
 //        classwork10 cl10 = new classwork10();
 //        Binary binary = new Binary();
-        PaliWord pali = new PaliWord();
+//        PaliWord pali = new PaliWord();
+        Midterm mid = new Midterm();
     }
 }
